@@ -31,7 +31,17 @@
                       </block>
                     </value>
                     <next>
-                      <block type="movement_reverse" id="163"></block>
+                      <block type="movement_reverse" id="163">
+                        <next>
+                          <block type="robot_delay" id="289" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="290">
+                                <field name="NUM">5000</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
                     </next>
                   </block>
                 </next>

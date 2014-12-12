@@ -1,1 +1,48 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="1" inline="true" x="-4" y="75">
+    <field name="VAR">i</field>
+    <value name="VALUE">
+      <block type="math_number" id="217">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="robot_delay" id="50" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="268">
+            <field name="NUM">5000</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="25" inline="false">
+            <field name="MODE">UNTIL</field>
+            <value name="NUMBER">
+              <block type="sensor_button" id="288">
+                <field name="OBJECT">UP</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_forward" id="153">
+                <next>
+                  <block type="robot_delay" id="175" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="275">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_reverse" id="163"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="movement_stop" id="42"></block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
